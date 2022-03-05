@@ -1,0 +1,119 @@
+.shopList {
+  height: 100%;
+  padding: 50rpx;
+  background: #f1f1f1;
+}
+.searchBarBox {
+  /* width: 650rpx; */
+ display: flex;
+  /* justify-content: center; */
+}
+.searchLeft {
+  flex: 1;
+  background-color: #fff;
+  border-radius: 30rpx;
+  padding-left: 20rpx;
+  padding-right: 10rpx;
+  display: flex;
+  align-items: center;
+  font-size: 28rpx;
+}
+.moreCity{
+  margin-left: 30rpx;
+  padding: 0 20rpx;
+  line-height: 64rpx;
+  border: 2rpx solid #ccc;
+}
+.cancelIcon {
+  width: 50px;
+  height: 50px;
+}
+
+.searchBar {
+  /* width: 600rpx; */
+  margin-left: 20rpx;
+  font-size: 26rpx;
+}
+
+.searchBarBox image {
+  width: 42rpx;
+    height: 42rpx;
+    padding: 10rpx;
+    background-size: cover;
+}
+.header {
+font-size: 32rpx;
+display: flex;
+}
+.currentCity {
+padding: 0 20rpx;
+line-height: 64rpx;
+margin: 0 20rpx;
+border: 2rpx solid #ccc;
+}
+
+.list {
+  /* padding: 0 37.5rpx; */
+}
+.item {
+  /* display: flex; */
+  font-size: 28rpx;
+  margin: 30rpx 0;
+  padding: 20rpx 30rpx;
+  background: #fff;
+}
+
+.tel {
+  text-decoration: underline;
+}
+
+.name {
+  font-size: 32rpx;
+  font-weight: 600;
+  line-height: 64rpx;
+}
+
+.address {
+  line-height: 64rpx;
+}
+
+.map {
+  width: 30rpx;
+  height: 30rpx;
+  margin-right: 10rpx;
+  vertical-align: middle;
+}
+
+.tel {
+  height: 64rpx;
+  line-height: 64rpx;
+}
+
+.time {
+  height: 64rpx;
+  line-height: 64rpx;
+}
+
+.foot {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  text-decoration: underline;
+  text-align: center;
+}
+
+.distance {
+
+  height: 64rpx;
+  line-height: 64rpx;
+  margin-right: 30rpx;
+}
+
+.toshop {
+
+  padding: 0 30rpx;
+  color: #fff;
+  background: #000;
+  height: 64rpx;
+  line-height: 64rpx;
+}

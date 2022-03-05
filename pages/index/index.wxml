@@ -1,0 +1,58 @@
+<!--index.wxml-->
+<view class="myPage">
+  <view class="warp">
+    <!-- <view class="userinfo">
+      <block wx:if="{{!hasUserInfo}}">
+        <button wx:if="{{canIUseGetUserProfile}}" bindtap="getUserProfile"> 登录 </button>
+        <button wx:else open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 登录 </button>
+      </block>
+      <block wx:else>
+        <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+        <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+      </block>
+    </view> -->
+    <view class="userinfo">
+      <block wx:if="{{canIUseOpenData}}">
+        <view class="userinfo-avatar" bindtap="bindViewTap">
+          <open-data type="userAvatarUrl"></open-data>
+        </view>
+        <open-data type="userNickName"></open-data>
+      </block>
+      <block wx:elif="{{!hasUserInfo}}">
+        <button wx:if="{{canIUseGetUserProfile}}" bindtap="getUserProfile"> 获取头像昵称 </button>
+        <button wx:elif="{{canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+        <view wx:else> 请使用1.4.4及以上版本基础库 </view>
+      </block>
+      <block wx:else>
+        <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+        <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+      </block>
+    </view>
+  </view>
+  <view class="tab">
+    <view class="swiper-tab">
+      <view class="swiper-tab-list {{currentTab==1 ? 'on' : ''}} line" data-current="1" bindtap="swichNav">
+        <view class="count">{{yw_count}}</view>
+        <view class="flag">已预约</view>
+      </view>
+      <view class="swiper-tab-list {{currentTab==4 ? 'on' : ''}}" data-current="4" bindtap="swichNav">
+        <view class="count">{{fw_count}}</view>
+        <view class="flag">已完成</view>
+      </view>
+    </view>
+    <view class="list" current="{{currentTab}}" data-currentTab="{{current}}" bindtap="bindChange">
+      <view class="item" wx:for="{{tabList}}" wx:key="index">
+        <view class="title">
+          <text class="type">{{item.service?item.service:"无"}}</text>
+          <text class="status"><text class="state">状态：</text>{{item.order_status}}</text>
+        </view>
+        <view class="store">
+          <text class="storename">预约门店：{{item.stoer}}</text>
+          <text wx:if="{{item.rec_order_status =='1'}}" class="look" data-service="{{item.service}}" data-rec_id="{{item.rec_id}}" data-order_status="{{item.order_status}}"
+            bindtap="finishPage">查看详情</text>
+        </view>
+        <view class="time">预约时间：<text class="reserve_time">{{item.rec_reserve_time}}</text></view>
+      </view>
+    </view>
+  </view>
+</view>

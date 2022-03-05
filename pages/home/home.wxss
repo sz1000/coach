@@ -1,0 +1,161 @@
+/* components/mask/mask.wxss */
+.content {
+  margin: 35% 30rpx;
+  padding: 40rpx 30rpx;
+  background: #fff;
+}
+
+.mask {
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  background: rgba(0, 0, 0, .3);
+}
+
+.title {
+  font-size: 26rpx;
+  line-height: 48rpx;
+  margin-bottom: 20rpx;
+  height: 48rpx;
+}
+
+.list {
+  font-size: 24rpx;
+
+}
+
+.item {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  line-height: 52rpx;
+}
+
+.order {
+  margin-right: 10rpx;
+}
+
+.li {
+  flex: 1;
+  margin: 10rpx 0;
+}
+
+.text {
+  font-size: 24rpx;
+}
+
+.num {
+  text-decoration: underline;
+}
+
+.read {
+  display: flex;
+  margin: 20rpx 0 0;
+  line-height: 64rpx;
+  height: 64rpx;
+}
+
+.agree {
+  font-size: 24rpx;
+}
+
+.auth {
+  height: 64rpx;
+  line-height: 64rpx;
+  margin-bottom: 20rpx;
+  font-size: 24rpx;
+  color: red;
+}
+
+/*checkbox 选项框大小  */
+.checkbox .wx-checkbox-input {
+  width: 26rpx;
+  height: 26rpx;
+  margin-bottom: 10rpx;
+}
+
+/*checkbox选中后样式  */
+.checkbox .wx-checkbox-input.wx-checkbox-input-checked {
+  background: #000;
+}
+
+.active .wx-checkbox-input {
+  border-color: red;
+}
+
+/*checkbox选中后图标样式  */
+.checkbox .wx-checkbox-input.wx-checkbox-input-checked::before {
+
+  line-height: 26rpx;
+  text-align: center;
+  font-size: 24rpx;
+  color: #fff;
+  background: transparent;
+  transform: translate(-50%, -50%) scale(1);
+  -webkit-transform: translate(-50%, -50%) scale(1);
+}
+.btn {
+  display: flex;
+  padding-top: 40rpx;
+}
+
+.agreeBtn {
+  text-align: center;
+  width: 100%;
+  background: #000;
+  color: #fff;
+  height: 64rpx;
+  line-height: 64rpx;
+  font-size: 32rpx;
+  }
+
+.test {
+  display: block;
+  font-size: 26rpx;
+}
+
+.def {
+  margin: 0 0 20rpx 0;
+}
+
+.box {}
+
+.top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bot {
+  display: flex;
+  margin: 0 0 20rpx 0;
+}
+
+.foot {
+  margin: 0 0 20rpx 0;
+}
+
+.left-text {
+  /* flex: 1; */
+  display: flex;
+  /* flex: 1; */
+  justify-content: center;
+}
+
+.right-text {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  /* flex: 1; */
+}
+
+.left-lis {
+  flex: 1;
+  margin-right: 6rpx;
+}
+
+.right-lis {
+  flex: 1;
+}

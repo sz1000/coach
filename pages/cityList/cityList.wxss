@@ -1,0 +1,110 @@
+.box {
+  /* display: flex; */
+  padding: 0 30rpx;
+}
+
+.item {
+  width: 100%;
+  font-size: 32rpx;
+  line-height: 64rpx;
+  border-bottom: 2rpx solid #f1f1f1;
+}
+
+.page .content .person-list .person {
+  margin-bottom: 18rpx;
+  background: #fff;
+  /* display: flex; */
+}
+
+.page .content .person-list .person .person-sign {
+  /* width: 80rpx; */
+  width: 100%;
+  /* text-align: center; */
+  /* margin-top: 46rpx; */
+  font-size: 32rpx;
+  font-family: Arial;
+  color: #313133;
+  padding: 20rpx 30rpx;
+  background: #f2f2f2;
+}
+
+.page .content .person-list .person .person-content {
+  width: calc(100% - 80rpx);
+  padding: 0 30rpx;
+}
+
+.page .content .person-list .person .person-content .person-cont {
+  display: flex;
+  align-items: center;
+  padding: 20rpx 0;
+}
+
+.page .content .person-list .person .person-content .person-cont .person-head {
+  width: 80rpx;
+  height: 80rpx;
+  background: #f7f7f7;
+  border-radius: 50%;
+  margin-right: 40rpx;
+}
+
+.page .content .person-list .person .person-content .person-cont .person-name {
+  font-size: 32rpx;
+  color: #313133;
+}
+
+.page .content .person-list .person .person-content .border {
+  border-bottom: 1rpx solid #f7f7f7;
+}
+
+.page .content .letter-list {
+  position: fixed;
+  top: 150rpx;
+  right: 0;
+  z-index: 999;
+  width: 60rpx;
+  font-family: Arial;
+  font-size: 26rpx;
+  text-align: center;
+}
+
+.page .content .letter-list .letter {
+  /* margin-bottom: 10rpx; */
+  /* padding: 0rpx 20rpx; */
+  line-height: 60rpx;
+}
+
+.active {
+  /* transform: scale(1.5); */
+  color: #fff;
+  background: #ccc;
+  width: 60rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  border-radius: 50%;
+  
+}
+
+.backTop {
+  font-size: 26rpx;
+  line-height: 64rpx;
+}
+
+.hotList-tit {
+  width: 100%;
+  padding: 20rpx 30rpx;
+  background: #f2f2f2;
+  font-size: 32rpx;
+}
+
+.hotList-cont {
+  padding: 10rpx 30rpx;
+}
+
+.hotList-cont view {
+  display: inline-block;
+  padding: 10rpx;
+  text-align: center;
+  font-size: 32rpx;
+  border: 1px solid #f3f3f3;
+  margin-left: 5px;
+}

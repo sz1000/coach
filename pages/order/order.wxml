@@ -1,0 +1,40 @@
+<view class="order"style="background:url({{top_bg}})no-repeat center center;background-size: cover;height:100%;">
+  <!--  background-position: 0px -146px;height:1068rpx; -->
+  <view class="box" >
+    <view class="head">
+      <view class="text">
+        <text class="title">感谢预约，</text>
+        <text class="logo">COACH</text>
+        <text class="title">期待你的光临</text>
+      </view>
+      <view class="time">
+        <text class="reserve_time">{{obj.date}}，</text>
+        <text class="week">{{obj.w_week}}</text>
+        
+      </view>
+      <view class="time">
+        <text class="week">预约时间：</text>
+        <text class="reserve_time">{{obj.time}}</text>
+      </view>
+    </view>
+    <view class="line"></view>
+    <view class="code">
+      <image class="codeBg" src="{{obj.src}}"></image>
+    </view>
+    <view class="info">
+      <view class="caption">{{obj.ser_type}}</view>
+      <view class="address"><image class="icon" src="../../static/images/shop.png"/>{{obj.store}}</view>
+      <view class="address">
+        <image class="icon" src="../../static/images/address.png"/>
+        <text>{{obj.sto_addr}}</text>
+      </view>
+      <view class="tel"><image class="icon" src="../../static/images/tel.png"/>{{obj.sto_phone}}</view>
+      <view class="range"><image class="icon" src="../../static/images/time.png"/>周一至周日<text class="all">{{obj.all}}</text></view>
+    </view>
+    <view class="foot">
+      <text class="edit" bindtap="edit" data-status="{{edit}}" data-ser_type="{{obj.ser_type}}" data-order_id="{{obj.order_id}}">更改预约</text>
+      <text>|</text>
+      <text  class="cancel" bindtap="cancel">取消预约</text>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,84 @@
+<view class="mallPage">
+  <view class="temperley">品牌资讯</view>
+  <!-- 轮播 -->
+  <view class="swiper-warp">
+    <!-- indicator-dots="{{indicatorDots}}" -->
+    <swiper class="swiper" circular autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+      <block>
+        <swiper-item wx:for="{{swiperList}}" wx:key="index">
+          <image src="{{item.link}}" class="image" bindtap='loadFuction' data-id="{{index}}" mode="widthFix" />
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+
+  <view class="temperley listText">服务列表</view>
+  <!-- 列表 -->
+  <view class='page-body' wx:for="{{list}}" wx:key="ser_id">
+    <block>
+      <view class='item'>
+        <image mode="widthFix" class='poster' src='{{item.ser_image}}'></image>
+        <view class='meta'>
+          <text class='title'>{{item.ser_type}}<text wx:if="{{item.custom}}">*</text></text>
+          <text bindtap="toSubscribe" data-item="{{item}}" class="subscribe">立即预约</text>
+          <text bindtap="toExplain" data-item="{{item}}" data-id="{{item.ser_id}}" class="explain">服务说明</text>
+          <text wx:if="{{item.charge}}" bindtap="charge" data-item="{{item}}" class="charge">{{item.charge}}</text>
+        </view>
+      </view>
+    </block>
+    <block wx:if="{{show}}">
+      <view class="mask" wx:if="{{clickIndex==item.ser_id}}">
+        <view class="box">
+          <view bindtap="closeMask" class="close">
+            <image mode="aspectFit" src="../../static/images/close.png"></image>
+          </view>
+          <view class="content">
+            <view class="topImg">
+              <image mode="widthFix" src="{{item.ser_image}}"></image>
+            </view>
+            <view class="appointmentType">
+              <text class="detailType">{{item.ser_type}}<text wx:if="{{item.custom}}">*</text></text>
+            </view>
+            <view class="list">
+              <view class="listPic" wx:for="{{item.ser_detail_images}}" wx:key="index">
+                <image class="listImg" src="{{item}}"></image>
+              </view>
+            </view>
+            <view class="describe">
+              <view class="txt">{{item.description}}</view>
+              <view class="txt">{{item.detailtext}}</view>
+              <view wx:if="{{item.custom}}" class="custom">{{item.charge}}</view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </block>
+  </view>
+  <!-- 弹层 -->
+  <!-- <view class="mask" wx:if="{{show}}">
+    <view class="box" >
+      <view bindtap="closeMask" class="close">
+        <image mode="aspectFit" src="../../static/images/close.png"></image>
+      </view>
+      <view class="content"  wx:for="{{list}}" wx:key="index">
+        <view class="topImg">
+          <image mode="widthFix" src="{{item.ser_image}}"></image>
+        </view>
+        <view class="appointmentType">
+          <text class="detailType">{{item.ser_type}}</text>
+        </view>
+        <view class="list">
+          <view class="listPic" wx:for="{{item.detailImgList}}" wx:key="index">
+            <image class="listImg" src="{{item}}"> </image>
+          </view>
+        </view>
+        <view class="describe">
+          <view class="txt">{{item.description}}</view>
+          <view class="txt">{{item.detailtext}}</view>
+          <view wx:if="{{item.custom}}" class="custom">{{item.charge}}</view>
+        </view>
+      </view>
+    </view>
+  </view> -->
+
+</view>

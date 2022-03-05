@@ -1,0 +1,51 @@
+<!--pages/home/home.wxml-->
+<view>
+  <!--  wx:if="{{!firstAuth}}" -->
+  <view class="mask">
+    <view class="content">
+      <view class="title">安全与隐私政策</view>
+      <view class="list">
+        <scroll-view style="height:560rpx;" scroll-into-view="id{{toView}}" scroll-y="true"
+          scroll-with-animation="true">
+          <view class="item" wx:for="{{list}}" wx:key="index" bindtap="jumpTo" data-opt="{{index+1}}">
+            <view class="tabs"><text class="order">{{index+1}}</text>{{item.title}}</view>
+            <text class="num">{{index+1}}</text>
+          </view>
+          <view wx:for="{{list}}" id="id{{item.id}}" wx:key="index" class="test">
+            <view class="li"><text class="order">{{index+1}}</text>{{item.title}}</view>
+            <view class="def">{{item.content}}</view>
+            <view wx:for="{{item.arr}}" wx:key="index">
+              <view class="def">{{item.txt}}</view>
+              <view class="def">{{item.info}}</view>
+              <view class="def" wx:for="{{item.lis}}" wx:key="index">{{item}}</view>
+            </view>
+            <view class="box" wx:if="{{toView===4}}">
+              <view class="top">
+                <view class="left-text">{{item.tst}}</view>
+                <view class="right-text">{{item.tct}}</view>
+              </view>
+              <view class="bot" wx:for="{{item.userInfo}}" wx:key="index">
+                <view class="left-lis">{{item.leftNum}}</view>
+                <view class="right-lis">{{item.rightText}}</view>
+              </view>
+              <view class="foot">{{item.foot}}</view>
+            </view>
+          </view>
+        </scroll-view>
+      </view>
+      <!-- <view class="read">
+        <checkbox-group bindchange="checkboxChange">
+          <view>
+            <checkbox class="checkbox {{flag ? 'active' : ''}}" value="1"/>
+          </view>
+        </checkbox-group>
+        <view class="agree">我已阅读并同意更新后的COACH《安全与隐私政策》</view>
+        
+      </view> -->
+      <!-- <view wx:if="{{flag}}" class="auth">请勾选您已阅读并同意更新后的COACH《安全与隐私政策》</view> -->
+      <view class="btn">
+        <view class="agreeBtn" data-show="{{show}}" bindtap="myBtn">同意</view>
+      </view>
+    </view>
+  </view>
+</view>

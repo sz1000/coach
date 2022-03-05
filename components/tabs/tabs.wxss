@@ -1,0 +1,31 @@
+.tabs {
+  height: 100%;
+}
+.tabs-title {
+  height: 64rpx;
+  line-height: 64rpx;
+  font-size: 28rpx;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.title-item{
+  flex:1;
+  display: flex;
+  justify-content: center; /*水平对齐*/
+  align-items: center;/*垂直对齐*/
+}
+
+.active {
+  border-bottom: 5rpx solid #f00;
+  color: #f00;
+}
+
+.tabs-content {
+  font-size: 28rpx;
+  margin: 30rpx;
+  padding: 20rpx;
+  line-height: 64rpx;
+}

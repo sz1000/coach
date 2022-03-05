@@ -1,0 +1,91 @@
+/**app.wxss**/
+page {
+  font-family:"FZSuXSLSJW4";
+   font-size:32rpx;          /*微信小程序中，使用rpx做单位*/
+}
+
+/* @font-face {
+  font-family: 'FZSuXSLSJW1';
+  src: url("https://coachorder.zen-x.com.cn/media/fonts/SourceHanSansCN-Bold.otf")
+}
+@font-face {
+  font-family: 'FZSuXSLSJW2';
+  src: url("https://coachorder.zen-x.com.cn/media/fonts/SourceHanSansCN-Heavy.otf")
+}
+@font-face {
+  font-family: 'FZSuXSLSJW3';
+  src: url("https://coachorder.zen-x.com.cn/media/fonts/SourceHanSansCN-Medium.otf")
+} */
+@font-face {
+  font-family: 'FZSuXSLSJW4';
+  src: url("https://coachorder.zen-x.com.cn/media/fonts/SourceHanSansCN-Regular.otf")
+}
+/* @font-face {
+  font-family: 'FZSuXSLSJW5';
+  src: url("https://coachorder.zen-x.com.cn/media/fonts/SourceHanSansCN-ExtraLight.otf")
+}
+@font-face {
+  font-family: 'FZSuXSLSJW6';
+  src: url("https://coachorder.zen-x.com.cn/media/fonts/SourceHanSansCN-Light.otf")
+}
+@font-face {
+  font-family: 'FZSuXSLSJW7';
+  src: url("https://coachorder.zen-x.com.cn/media/fonts/SourceHanSansCN-Normal.otf")
+}
+
+@font-face {
+  font-family: 'FZSuXSLSJW8';
+  src: url("https://coachorder.zen-x.com.cn/media/fonts/BrownStd%20Bold.otf")
+}
+@font-face {
+  font-family: 'FZSuXSLSJW9';
+  src: url("https://coachorder.zen-x.com.cn/media/fonts/BrownStd-Bold.otf")
+}
+@font-face {
+  font-family: 'FZSuXSLSJW10';
+  src: url("https://coachorder.zen-x.com.cn/media/fonts/BrownStd%20Regular.otf")
+} */
+@font-face {
+  font-family: 'FZSuXSLSJW11';
+  src: url("https://coachorder.zen-x.com.cn/media/fonts/BrownStd-Regular.otf")
+}
+/* @font-face {
+  font-family: 'FZSuXSLSJW12';
+  src: url("https://coachorder.zen-x.com.cn/media/fonts/DFPHeiW3.TTF")
+} 
+@font-face {
+  font-family: 'FZSuXSLSJW13';
+  src: url("https://coachorder.zen-x.com.cn/media/fonts/BrownStd-Italic.otf")
+}
+@font-face {
+  font-family: 'FZSuXSLSJW14';
+  src: url("https://coachorder.zen-x.com.cn/media/fonts/BrownStd%20Light.otf")
+}
+
+@font-face {
+  font-family: 'FZSuXSLSJW15';
+  src: url("https://coachorder.zen-x.com.cn/media/fonts/DFPHeiW5.TTF")
+}
+@font-face {
+  font-family: 'FZSuXSLSJW16';
+  src: url("https://coachorder.zen-x.com.cn/media/fonts/DFPHeiW7-GB5.TTF")
+}
+@font-face {
+  font-family: 'FZSuXSLSJW17';
+  src: url("https://coachorder.zen-x.com.cn/media/fonts/DFPHeiW9.TTF")
+}
+@font-face {
+  font-family: 'FZSuXSLSJW18';
+  src: url("https://coachorder.zen-x.com.cn/media/fonts/BrownStd%20Thin.otf")
+}
+*/
+
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 50rpx 0;
+  box-sizing: border-box;
+} 

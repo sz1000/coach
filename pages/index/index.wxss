@@ -1,0 +1,173 @@
+/**index.wxss**/
+.myPage {
+  margin: 0 37.5rpx;
+  height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50rpx 0;
+    box-sizing: border-box;
+}
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #aaa;
+}
+
+.userinfo-avatar {
+  overflow: hidden;
+  width: 128rpx;
+  height: 128rpx;
+  border-radius: 50%;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  width: 90%;
+  margin: 50rpx 30rpx;
+  line-height: 64rpx;
+  border: 2rpx solid #ccc;
+  padding: 30rpx 0;
+}
+
+.left {
+  flex: 1;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+}
+
+.right {
+  flex: 1;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+}
+
+.count {
+  font-size: 32rpx;
+  font-weight: 600;
+}
+
+.num {
+  font-size: 28rpx;
+  color: #777;
+}
+
+/*  */
+.tab {
+  width: 100%;
+  margin: 0 37.5rpx;
+}
+
+.swiper-tab {
+  /* width: 100%; */
+  text-align: center;
+  display: flex;
+}
+
+.swiper-tab-list {
+  flex: 1;
+  font-size: 30rpx;
+  display: inline-block;
+  margin: 50rpx 0;
+}
+
+.line {
+  border-right: 1rpx solid #ddd;
+}
+
+.count {
+  font-family: "FZSuXSLSJW14";
+  font-size: 28rpx;
+}
+
+.flag {
+  color: #999;
+  font-size: 28rpx;
+}
+
+.state {
+  font-weight: 700;
+  font-size: 28rpx;
+}
+
+/* .on {
+  color: #ccc;
+  border-bottom: 3rpx solid #ccc;
+} */
+
+.swiper-box {
+  /* display: block; */
+}
+
+.swiper-item {
+  width: 100rpx;
+  display: inline-block !important;
+}
+
+.swiper-box view {
+  text-align: center;
+}
+
+.item {
+  width: 100%;
+  margin: 30rpx 0;
+}
+
+.title {
+  font-family: "FZSuXSLSJW4";
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+}
+
+.storename {
+  flex: 1;
+}
+
+.type {
+  font-family: "FZSuXSLSJW4";
+  flex: 1;
+  font-size: 32rpx;
+  line-height: 64rpx;
+}
+
+.status {
+  font-size: 28rpx;
+  color: #333;
+  line-height: 64rpx;
+}
+
+.store {
+  display: flex;
+  font-size: 28rpx;
+  line-height: 52rpx;
+  color: #777;
+}
+.reserve_time {
+  font-family: "FZSuXSLSJW14";
+}
+
+.look {
+  /* padding: 0 30rpx;
+  margin-right: 50rpx;
+  font-size: 28rpx;
+  color: #333;
+  text-decoration: underline; */
+  width: 100rpx;
+  border-bottom: 2rpx solid #333;
+  font-size: 24rpx;
+  text-align: center;
+}
+
+.time {
+  font-size: 28rpx;
+  color: #777;
+  line-height: 52rpx;
+}

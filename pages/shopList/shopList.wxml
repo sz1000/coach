@@ -1,0 +1,43 @@
+<view class="shopList">
+  <!-- 搜索 -->
+  <view class="searchBarBox">
+    <view class="searchLeft">
+      <image class="searchIcon" mode="widthFix" src="../../static/images/Shape@2x.png" />
+      <input class="searchBar" bindinput="handleInput" placeholder="请输入城市或门店名称" value='{{inputValue}}' />
+      <view bindtap="cancelInput"
+        style="width:50rpx;height: 100%;display: flex;justify-content: center;align-items: center;">
+        <image wx:if="{{inputValue.length != 0}}" class="cancelIcon" mode="widthFix"
+          src="../../static/images/system-closea@2x.png" />
+      </view>
+      
+    </view>
+    <view class="moreCity" data-id="{{id}}" bindtap="clickCity">更多城市</view>
+  </view>
+  <!-- <view class="header">
+    <text class="currentCity">当前城市：{{form.city}}</text>
+    <text class="moreCity" data-id="{{id}}" bindtap="clickCity">选择其他城市</text>
+  </view> -->
+  <view class="list">
+
+
+    <view class="item" wx:for="{{storeData}}" wx:key="index">
+      <view class="name">{{item.sto_name}}</view>
+      <view class="address">{{item.sto_addr}}</view>
+      <view class="tel">{{item.sto_phone}}</view>
+      <!--  <view class="time">周一到周日10:00-22:00</view> -->
+      <view class="foot">
+        <view class="distance">
+          <view wx:if="{{item.distance}}">
+            <image class="map" src="../../static/images/distance.png" />
+            <text>{{item.distance}}km</text>
+          </view>
+
+        </view>
+        <view class="toshop" data-item="{{item}}" data-sto_name="{{item.sto_name}}" bindtap="toShop">预约到店</view>
+      </view>
+
+      <!-- <view>{{latitude}}</view>
+    <view>{{longitude}}</view> -->
+    </view>
+  </view>
+</view>

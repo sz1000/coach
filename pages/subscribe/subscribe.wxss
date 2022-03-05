@@ -1,0 +1,303 @@
+.mallPage {
+  height: 100%;
+  margin: 0 37.5rpx;
+}
+
+.weui-label:before {
+  content: '* ';
+  color: red;
+}
+
+.title {
+  font-family: "FZSuXSLSJW3";
+  font-size: 30rpx;
+  width: 100%;
+  text-align: center;
+  margin: 30rpx 0;
+}
+
+button {
+  width: 100% !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  border-radius: 0rpx !important;
+  font-weight: normal !important;
+}
+
+.must {
+  /* color: red; */
+}
+
+.code {
+  width: 380rpx;
+  font-size: 28rpx;
+  height: 64rpx;
+  line-height: 64rpx;
+}
+
+.contacts {
+  flex: 1;
+}
+
+.gender {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  /* margin-left: 70rpx; */
+}
+
+.radio {
+  position: relative;
+  margin-right: 10rpx;
+}
+
+.radio radio {
+  opacity: 0;
+  width: 44rpx;
+  height: 44rpx;
+}
+
+.radio image {
+  position: absolute;
+  top: -6rpx;
+  left: 0;
+  width: 44rpx;
+  height: 44rpx;
+}
+
+.selected {
+/* flex: 1; */
+} 
+.text {
+  flex: 1;
+  line-height: 44rpx;
+}
+.checkbox {
+  display: flex;
+
+
+ }
+/*checkbox 整体大小  */
+checkbox {
+  width: 44rpx;
+  height: 44rpx;
+  margin: 10rpx 0 0 0;
+  transform: scale(0.6,0.6) !important;
+    transform-origin: 0 0 !important;
+}
+/*checkbox 选项框大小  */
+checkbox .wx-checkbox-input {
+  width: 44rpx;
+  height: 44rpx;
+}
+/*checkbox选中后样式  */
+checkbox .wx-checkbox-input.wx-checkbox-input-checked {
+  background: #000;
+}
+/*checkbox选中后图标样式  */
+checkbox .wx-checkbox-input.wx-checkbox-input-checked::before {
+  width: 28rpx;
+  height: 28rpx;
+  line-height: 28rpx;
+  text-align: center;
+  font-size: 22rpx;
+  color: #fff;
+  background: transparent;
+  transform: translate(-50%, -50%) scale(1);
+  -webkit-transform: translate(-50%, -50%) scale(1);
+}
+
+.section {
+  display: flex;
+  font-size: 32rpx;
+  height: 88rpx;
+  line-height: 88rpx;
+}
+
+/* 单选按钮样式*/
+radio .wx-radio-input {
+  width: 40rpx;
+  height: 40rpx;
+  border: 4rpx solid #8C8C8C;/* 外圈边框，默认灰色，即未选中状态*/
+  /* border-radius: 50%; */
+  background: none;
+}
+/*单选按钮选中后内部样式*/
+radio .wx-radio-input.wx-radio-input-checked {
+  border: 4rpx solid #00A0E9 !important;/* 外圈边框，选中状态颜色*/
+  background-color: white !important;/* 外圈边框与内圈实心圆间的内容的颜色，不设置就默认是上面的绿色*/
+}
+/*单选按钮选中后内部中心*/
+radio .wx-radio-input.wx-radio-input-checked::before {
+  width: 60%;
+  height: 60%;
+  background: #00A0E9;/* 内圈实心圆选中状态颜色*/
+  /* border-radius: 50%; */
+  /* content: ''; */
+  transform: translate(-50%, -50%) scale(1);
+  -webkit-transform: translate(-50%, -50%) scale(1);
+}
+
+.center {
+  /* text-align: center; */
+}
+
+picker {
+  flex: 1;
+}
+
+.label {
+  width: 120rpx;
+  height: 64rpx;
+  line-height: 64rpx;
+  /* background: #f5f5; */
+}
+
+.input {
+  font-family: "FZSuXSLSJW14";
+  flex: 1;
+  /* width: 100%; */
+  height: 88rpx;
+  line-height: 88rpx;
+  border: 1px solid #ccc;
+  /* text-indent: 20rpx; */
+  padding-left: 20rpx;
+  /* background-color: #ddd; */
+  /* text-align: center; */
+}
+
+.name {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.familyName {
+  flex: 1;
+  margin-right: 30rpx;
+}
+
+.firstName {
+  flex: 1;
+}
+
+.picker {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.date {
+  flex: 1;
+}
+
+.btn {
+  display: flex;
+  margin: 50rpx 0;
+}
+
+.submitBtn {
+  text-align: center;
+  width: 100%;
+  background: #000;
+  color: #fff;
+  height: 88rpx;
+  line-height: 88rpx;
+  font-size: 32rpx;
+  margin: 0 30rpx;
+}
+
+.personal {
+  margin: 20rpx 0;
+}
+
+.rease {
+  flex: 1;
+}
+
+.formTitle {
+  font-family: "FZSuXSLSJW4";
+  font-size: 32rpx;
+  height: 88rpx;
+  line-height: 88rpx;
+}
+
+.all {
+  margin: 50rpx 0 20rpx;
+}
+
+.hint {
+  font-size: 32rpx;
+  color: #999;
+  margin-top: 20rpx;
+}
+
+.active {
+  color: red !important;
+
+}
+
+.codeBtn {
+  position: absolute;
+  right: 6rpx;
+  top: 6rpx;
+  z-index: 9999;
+  background: #fff !important;
+  width: 148rpx !important;
+  text-align: center;
+  border-bottom: 1px solid #001;
+  font-size: 28rpx;
+  padding-top: 20rpx !important;
+  margin-right: 20rpx !important;
+}
+
+.sel {
+  display: flex;
+}
+
+.sel .item {
+  flex: 1;
+}
+
+/* .codeBtn {
+  position: absolute;
+  right: 6rpx;
+  top: 6rpx;
+  z-index: 9999;
+  background: #fff !important;
+  text-decoration: underline !important;
+  width: 200rpx !important;
+  text-align: center;
+  font-size: 28rpx;
+  height: 84rpx;
+  line-height: 84rpx;
+} */
+
+.tel {
+  margin-bottom: 50rpx;
+}
+
+.pos {
+  position: relative;
+}
+
+.down {
+  width: 48rpx;
+  height: 48rpx;
+  position: absolute;
+  top: 20rpx;
+  right: 15rpx;
+}
+
+.isChecked {
+  margin-top: 50rpx;
+  font-size: 24rpx;
+  color: #777;
+}
+
+.policy {
+  font-family: "FZSuXSLSJW1";
+  font-weight: bold;
+  border-bottom: 2rpx solid #777;
+}

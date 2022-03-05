@@ -1,0 +1,82 @@
+<view class="mallPage">
+  <form catchsubmit="formSubmit" catchreset="formReset">
+    <view class="title">{{ser_type}}预约</view>
+    <view class="formTitle personal">个人资料<text class="must"></text></view>
+    <view class="section pos tel">
+      <input class="input" bindinput='bindphone' name='phone' type='number' value='{{form.phone}}' placeholder="手机号码" />
+      <button class='codeBtn' open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber"
+        disabled='{{disabled}}'>{{authPhone}}</button>
+    </view>
+    <view class='section name tel'>
+      <input bindinput='bindContacts' class="input contacts" name='contacts' value='{{form.contacts}}'
+        placeholder="联系人" />
+      <view class="gender">
+        <radio-group name="gender" class="radio-group" bindchange="radioChange">
+          <label class="radio" wx:for="{{items}}" wx:key="index">
+            <radio value="{{item.value}}" bindtap="clickRadio" checked="{{checked}}"></radio>
+            <block wx:if="{{gender == item.value}}">
+              <image src='../../static/images/checked.png'></image>
+            </block>
+            <block wx:else>
+              <image src='../../static/images/checkout.png'></image>
+            </block>
+            {{item.name}}
+          </label>
+        </radio-group>
+      </view>
+    </view>
+    <view class="formTitle all">门店<text class="must"></text></view>
+    <view class="section pos">
+      <input class="input" bindtap="goShop" data-city="{{city}}" data-type="{{form.ser_type}}" placeholder="门店选择"
+        value="{{form.store}}" disabled="true" placeholder-class="center" />
+      <image class="down" src="../../static/images/down.png"></image>
+    </view>
+    <view class="formTitle all">日期<text class="must"></text></view>
+    <view class="section pos">
+      <picker mode="date" value="{{form.date}}" start="{{startTime}}" end="{{endTime}}" bindchange="bindDateChange">
+        <view class="picker">
+          <input name="date" disabled="true" class="input" bindinput="date" placeholder="年/月/日" value="{{form.date}}" />
+        </view>
+        <image class="down" src="../../static/images/down.png"></image>
+      </picker>
+    </view>
+    <view class="formTitle all">时间<text class="must"></text></view>
+    <view class="section pos time">
+      <picker disabled="{{flag ? false : true}}" bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+        <view class="picker">
+          <input name="time" bindtap="clickTime" disabled="true" class="input" placeholder="选择时间"
+            value="{{array[index]}}" />
+        </view>
+        <image class="down" src="../../static/images/down.png"></image>
+      </picker>
+    </view>
+    <view class="formTitle all">备注</view>
+    <view class="section">
+      <input bindinput='bindremark' name="remark" class="input" value="{{form.remark}}" placeholder="请在此输入您到店预约的其他需求" />
+    </view>
+    <view class="isChecked">
+      <view class="checkbox">
+        <label name="is_connection" bindtap="checkConnectionChange">
+          <checkbox class="selected" value="{{form.is_connection}}" checked="{{form.is_connection}}" />
+        </label>
+        <view class="text">我同意COACH使用以上信息安排预约服务、通过手机号与我沟通和确认预约服务相关事宜，且已阅读和同意<text class="policy"
+            bindtap="readPolicy">《安全与隐私政策》</text>。*
+        </view>
+      </view>
+    </view>
+    <view class="isChecked">
+      <view class="checkbox">
+        <label bindtap="checkChoosableChange">
+          <checkbox class="selected" value="{{form.is_choosable}}" checked="{{is_choosable}}" />
+        </label>
+        <view class="text">我希望获取更多有关COACH产品和服务信息，例如优惠、活动或调查邀请、市场推广等信息(通过包括但不限于短消息等方式接收)，且已阅读和同意<text class="policy"
+            bindtap="readPolicy">《安全与隐私政策》</text>。(可随时通过联系contactus@coach.com退订)</view>
+      </view>
+    </view>
+    <view class="btn">
+      <button class="submitBtn" formType="submit">提交</button>
+    </view>
+  </form>
+  <dialog wx:if="{{show}}" bindcloseMask="closeMask">
+  </dialog>
+</view>
